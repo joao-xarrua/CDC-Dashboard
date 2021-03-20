@@ -13,6 +13,12 @@ jQuery(function ($) {
         var active_tab_class = 'active-tab-menu';
         var the_tab = '.' + a.attr('data-tab');
 
+        var nav = document.querySelector('.menu');
+        var toggle = document.querySelector('.toggle img');
+
+        nav.classList.remove('active');
+        toggle.classList.remove('active');
+
         $('.menu ul li a').removeClass(active_tab_class);
 
         a.addClass(active_tab_class);

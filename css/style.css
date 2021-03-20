@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap');
+/*PARA CONTEUDO E DISPLAY: font-family: 'Mulish', sans-serif;*/
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
 }
 
 body {
     background: #042e3d;
+    overflow-x: hidden;
 }
 
 .menu {
@@ -51,7 +56,7 @@ body {
     display: flex;
     text-decoration: none;
     color: #ffffff;
-    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Mulish', sans-serif;
     font-size: 36px;
 }
 
@@ -79,15 +84,38 @@ body {
     text-align: center;
 }
 
-/* Parte do toggle*/
+/* --------------------- BACKGROUNDS --------------------- */
+
+.blue-bg {
+    background: #93c8d0;
+}
+
+.yellow-bg {
+    background: #f4dc26;
+}
+
+.red-bg {
+    background: #fe9441;
+}
+
+.green-bg {
+    background: #cef79f;
+}
+
+.brown-bg {
+    background: #cfba92;
+}
+
+/* --------------------- PARTE DO TOGGLE --------------------- */
 .toggle {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 60px;
     height: 60px;
     background: #1a96c1;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .toggle:hover {
@@ -124,7 +152,7 @@ body {
     display: block;
 }
 
-/* --------------------- CONTEUDO DO SITE --------------------- */
+/* --------------------- CONTEUDO DO INICIO --------------------- */
 
 .content {
     margin: 0 60px;
@@ -132,20 +160,23 @@ body {
 
 .tab-wrap {
     position: relative;
-    display: flex;
+    display: block;
     width: 100%;
-    margin-top: 60px;
+    height: auto;
+    margin-top: 20px;
 }
 
-.tab-wrap h1 {
+.tab-wrap .titulo {
+    display: block;
     position: relative;
-    font-size: 48px;
-    font-family: 'DotGothic16', sans-serif;
+    text-align: center;
     margin: 0 auto;
+    font-size: 48px;
+    font-family: 'Mulish', sans-serif;
     color: #ffffff;
 }
 
-.tab-wrap h1::after {
+.tab-wrap .titulo::after {
     content: '';
     display: block;
     width: 120px;
@@ -166,12 +197,105 @@ body {
     }
 }
 
+/* --------------------- CARDS --------------------- */
+
+.tab-content {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+
+}
 
 
+.tab-content h2 {
+    display: block;
+    margin-left: 10%;
+    font-size: 32px;
+    font-family: 'Mulish', sans-serif;
+    color: #ffffff;
+}
 
+.tab-content h2::after {
+    content: '';
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+    height: 3px;
+    background: #fff;
+}
 
+.tab-content .card {
+    display: flex;
+    max-width: 100%;
+    width: 80%;
+    min-height: 223px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0, .5);
+    font-family: 'Mulish', sans-serif;
+    background: #fff;
+}
 
+.card .preview {
+    border-radius: 10px 0 0 10px;
+    padding: 20px;
+    width: 360px;
+    text-align: center;
+}
 
+.card .preview img {
+    width: 160px;
+    height: 160px;
+    
+}
+
+.card .info {
+    padding: 20px;
+}
+
+.card .info span {
+    font-size: 14px;
+    color: rgb(119, 119, 119);
+    text-transform: uppercase;
+}
+
+.card .info h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.card .info p {
+    font-size: 16px;
+}
+
+.card .info a {
+    display: block;
+    font-size: 18px;
+    padding: 10px 20px;
+    background: #1a96c1;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: right;
+    transition: 0.5s;
+    
+}
+
+.card .info a:hover {
+    background: #ba181b;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, .5);
+}
+
+.card .info a:after {
+    content: '';
+    display: table;
+    clear: both;
+}
 
 
 
@@ -193,12 +317,37 @@ body {
 
 
 @media (max-width: 767px) {
+    /*PARTE DO MENU*/
     .menu {
-        left: -60px;
+        left: -360px;
     }
     
     .menu.active {
         left: 0;
         width: 100%;
+    }
+
+    /*PARTE DOS CARDS*/
+    
+    .tab-content h2 {
+        margin-left: 0;
+        font-size: 48px;
+    }
+
+    .tab-content .card {
+        display: block;
+        width: 100%;
+    }
+
+    .card .preview {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+
+    .card .info a {
+        float: none;
+        text-align: center;
+        margin-left: 0;
+        padding: 20px;
     }
 }

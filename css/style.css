@@ -199,7 +199,7 @@ body {
 
 /* --------------------- CARDS --------------------- */
 
-.tab-content {
+.tab-normal {
     display: block;
     position: relative;
     width: 100%;
@@ -209,7 +209,7 @@ body {
 }
 
 
-.tab-content h2 {
+.tab-1-content h2 {
     display: block;
     margin-left: 10%;
     font-size: 32px;
@@ -217,7 +217,7 @@ body {
     color: #ffffff;
 }
 
-.tab-content h2::after {
+.tab-1-content h2::after {
     content: '';
     display: block;
     margin-top: 20px;
@@ -226,7 +226,7 @@ body {
     background: #fff;
 }
 
-.tab-content .card {
+.tab-1-content .card {
     display: flex;
     max-width: 100%;
     width: 80%;
@@ -241,7 +241,7 @@ body {
 .card .preview {
     border-radius: 10px 0 0 10px;
     padding: 20px;
-    width: 360px;
+    min-width: 260px;
     text-align: center;
 }
 
@@ -297,18 +297,48 @@ body {
     clear: both;
 }
 
+/* ----------------------- TAB 2 ---------------------- */
 
 
 
+/* ----------------------- TAB 3 ---------------------- */
+
+
+/* ----------------------- TAB 4 ---------------------- */
 
 
 
+/* ----------------------- DONT WORK ---------------------- */
 
+.dont-work {
+    display: block;
+    position: relative;
+    text-align: center;
+}
 
+.dont-work img {
+    max-width: 260px;
+    margin-bottom: 30px;
+}
 
+.dont-work h3 {
+    font-size: 36px;
+    color: #fff;
+}
 
+.direitos {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-right: 60px;
+    margin-top: 100px;
+}
 
-
+.direitos a {
+    text-decoration: none;
+    color: #ba181b;
+    font-weight: 800;
+}
 
 
 
@@ -329,12 +359,12 @@ body {
 
     /*PARTE DOS CARDS*/
     
-    .tab-content h2 {
+    .tab-1-content h2 {
         margin-left: 0;
         font-size: 48px;
     }
 
-    .tab-content .card {
+    .tab-1-content .card {
         display: block;
         width: 100%;
     }

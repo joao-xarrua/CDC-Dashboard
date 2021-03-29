@@ -109,6 +109,8 @@ body {
 /* --------------------- PARTE DO TOGGLE --------------------- */
 .toggle {
     position: fixed;
+    display: none;
+    visibility: hidden;
     top: 0;
     right: 0;
     width: 60px;
@@ -291,13 +293,47 @@ body {
     box-shadow: 0px 5px 10px rgb(0, 0, 0, .5);
 }
 
-.card .info a:after {
-    content: '';
-    display: table;
-    clear: both;
-}
+
 
 /* ----------------------- TAB 2 ---------------------- */
+
+
+.tab-2-content table {
+    margin: 40px 60px 0 60px;
+    background: #fff;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tab-2-content table a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 30px 20px;
+}
+
+.tab-2-content table a:hover {
+    color: #ba181b;
+}
+
+/* Tabela de horarios */
+
+.tab-2-content table thead {
+    background: #1a96c1;
+}
+
+.tab-2-content table th {
+    border: 1px solid #042e3d;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.tab-2-content table td {
+    border: 1px solid #042e3d;
+}
+
 
 
 
@@ -345,8 +381,21 @@ body {
 /* ----------------------- REPONSIVIDADE ---------------------- */
 
 
+/* tablet*/
 
+@media (max-width: 980px) {
+
+    .toggle {
+        display: block;
+        visibility: visible;
+    }
+}
+
+
+
+/* celular */
 @media (max-width: 767px) {
+
     /*PARTE DO MENU*/
     .menu {
         left: -360px;
@@ -357,6 +406,12 @@ body {
         width: 100%;
     }
 
+
+    /*PAGINA INICIAL*/
+        
+    .content {
+        margin: 0 20px;
+    }
     /*PARTE DOS CARDS*/
     
     .tab-1-content h2 {

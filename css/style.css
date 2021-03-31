@@ -343,7 +343,6 @@ body {
 
 .tab-2-content .table_mobile {
     display: none;
-    margin: 30px auto;
     border-collapse: collapse;
     box-sizing: border-box;
     text-align: center;
@@ -354,7 +353,7 @@ body {
     color: #000;
     text-decoration: none;
     display: block;
-    padding: 40px 30px;
+    padding: 40px 10px;
 }
 
 .tab-2-content .table_mobile a:hover {
@@ -362,7 +361,7 @@ body {
 }
 
 .tab-2-content .table_mobile th {
-    padding: 20px 10px;
+    padding: 10px;
     background: #1a96c1;
     color: #fff;
     border-radius: 10px;

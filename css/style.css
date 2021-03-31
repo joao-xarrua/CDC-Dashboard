@@ -12,6 +12,12 @@ body {
     background: #042e3d;
     overflow-x: hidden;
 }
+/* normaliza tabelas*/
+.tab-2-content .table_mobile {
+    display: none;
+    visibility: hidden;
+}
+
 
 .menu {
     position: fixed;
@@ -297,41 +303,80 @@ body {
 
 /* ----------------------- TAB 2 ---------------------- */
 
+/* Table para computador -----------------*/
 
-.tab-2-content table {
-    margin: 40px 60px 0 60px;
+.tab-2-content .table_pc {
+    margin: 30px auto;
     background: #fff;
     border-collapse: collapse;
     box-sizing: border-box;
     text-align: center;
 }
 
-.tab-2-content table a {
+.tab-2-content .table_pc a {
     color: #000;
     text-decoration: none;
     display: block;
     padding: 30px 20px;
 }
 
-.tab-2-content table a:hover {
+.tab-2-content .table_pc a:hover {
     color: #ba181b;
 }
 
-/* Tabela de horarios */
-
-.tab-2-content table thead {
+.tab-2-content .table_pc thead {
     background: #1a96c1;
 }
 
-.tab-2-content table th {
-    border: 1px solid #042e3d;
+.tab-2-content .table_pc th {
+    border: 3px solid #042e3d;
     padding: 10px;
     color: #fff;
     text-transform: uppercase;
 }
 
-.tab-2-content table td {
-    border: 1px solid #042e3d;
+.tab-2-content .table_pc td {
+    border: 3px solid #042e3d;
+}
+
+/* Table para mobile ----------------------*/
+
+.tab-2-content .table_mobile {
+    margin: 30px auto;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.tab-2-content .table_mobile a {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 40px 30px;
+}
+
+.tab-2-content .table_mobile a:hover {
+    color: #ba181b;
+}
+
+.tab-2-content .table_mobile th {
+    padding: 20px 10px;
+    background: #1a96c1;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.tab-2-content .table_mobile .tr_conteudo td {
+    background: #fff;
+    border-radius: 10px;
+    border: 3px solid #042e3d;
+}
+
+.tab-2-content .table_mobile .tr_indice td {
+    background: rgb(224, 224, 224);
+    border-radius: 10px;
+    border: 3px solid #042e3d;
 }
 
 
@@ -435,4 +480,18 @@ body {
         margin-left: 0;
         padding: 20px;
     }
+
+    /* Tabela horarios*/
+
+    .tab-2-content .table_pc {
+        display: none;
+        visibility: hidden;
+    }
+    
+    .tab-2-content .table_mobile {
+        display: block;
+        visibility: visible;
+    }
+
 }
+  

@@ -342,6 +342,7 @@ body {
 /* Table para mobile ----------------------*/
 
 .tab-2-content .table_mobile {
+    display: none;
     margin: 30px auto;
     border-collapse: collapse;
     box-sizing: border-box;
